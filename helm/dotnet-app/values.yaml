@@ -1,0 +1,13 @@
+replicaCount: 2
+
+image:
+  repository: dotnet-app
+  tag: "v2"
+  pullPolicy: Never     # Important! We use local image only
+
+service:
+  type: NodePort
+  port: 8080
+
+release:
+  namespace: dotnet-app   # optional but nice for slides / clarity  
